@@ -28,7 +28,7 @@ resource "azurerm_public_ip" "public_ip" {
 
   allocation_method        = "Static"
   idle_timeout_in_minutes  = 4
-  sku                      = "Basic"
+  sku                      = "Standard"
 
   tags = {
     Name = "lab_public_ip"

@@ -17,7 +17,10 @@ source ~/.bashrc
 git clone https://github.com/EveWangUW/vpn-config-generator-azure.git|| true
 cd vpn-config-generator-azure
 npm install
-pm2 start index.js
+pm2 start index.js  
+# Add after the "pm2 start index.js" line:
+sed -i "s|http://169.254.169.254/metadata/instance/network/interface/0/ipv4/ipAddress/0/publicIpAddress?api-version=2021-02-01&format=text|https://api.ipify.org?format=text|g" /vpn-config-generator-azure/index.js
+sed -i "s|{ headers: { 'Metadata': 'true' } }||g" /vpn-config-generator-azure/index.js
 cd ..
 sudo chown root:azureuser /etc/wireguard/public.key
 sudo chmod 640 /etc/wireguard/public.key

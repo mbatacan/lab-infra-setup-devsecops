@@ -39,3 +39,4 @@ terraform.rc
 open-devsecops-vpn.conf
 
 .DS_Store
+.env

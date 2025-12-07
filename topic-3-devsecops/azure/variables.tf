@@ -5,7 +5,7 @@ variable "resource_group_name" {
 
 variable "location" {
   description = "The Azure region to deploy the resources."
-  default     = "West US"
+  default     = "canadacentral"
 }
 
 variable "vnet_name" {
@@ -46,7 +46,7 @@ variable "vm_name" {
 variable "vm_size" {
   description = "The size of the virtual machine."
   # default     = "Standard_B1s"
-  default     = "Standard_B2s"
+  default     = "Standard_B2s_v2"
 }
 
 variable "vm_admin_username" {
@@ -76,7 +76,7 @@ variable "vpn_network_address" {
 
 variable "region" {
  type        = string
- default     = "West US"
+ default     = "canadacentral"
 }
 
 variable "nsg_name" {
@@ -96,5 +96,5 @@ variable "acr_name" {
 variable "subscription_id" {
   description = "The Azure subscription ID"
   type        = string
-  default     = "8fa24a70-a4ea-4c31-868a-f91dbef91879"
+  default     = "d8a4ffd6-c1ec-4ff7-b6e6-f7c929dcceb3"
 }
